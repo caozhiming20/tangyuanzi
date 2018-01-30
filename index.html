@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./jscss/style.css" type="text/css" media="all">
+	<!--导库-->
+	<script type="text/javascript" src="./jscss/jquery.js"></script>
+	<!-- 图片幻灯片效果-->
+	<script type="text/javascript" src="./jscss/roundabout.js"></script>
+	<script type="text/javascript" src="./jscss/roundabout_shapes.js"></script>
+	<script type="text/javascript" src="./jscss/gallery_init.js"></script>
+	<!-- 下雪-->
+	<script type="text/javascript" src="./jscss/snowstorm.js"></script>
+	<!-- 打字机效果-->
+	<script type="text/javascript" src="./jscss/text.js"></script>
+	<!-- 画爱心-->
+	<script type="text/javascript" src="./jscss/ga.js" async=""></script>
+	<script type="text/javascript" src="./jscss/heart.js"></script>
+	<!-- 移动div-->
+	<script type="text/javascript" src="./jscss/move.js"></script>
+	<!-- 显示时间 -->
+	<script type="text/javascript" src="./jscss/time.js"></script>
+</head>
+
+<body>
+
+	<!--#Header-->
+	<div id="header" style="opacity:0.85">
+		<div id="title">
+			I Love You Forever
+		</div>
+	</div>
+
+	<!-- #myContent -->
+	<div id="myContent">
+		<span id="blink" style="display: none;">_</span></div>
+	<div id="contentToWrite" style="display:none">
+		I love three things in the world :<br/> the sun,the moon,and you.<br/> The sun for day，<br/> the moon for night ，<br/>		and you forever<br/>
+		<br/> 浮世三千，吾爱有三：日、月与卿。
+		<br/> 日为朝，月为暮，卿为朝朝暮暮。
+		<br/> -----------------------Just for You, Yuan<br>
+	</div>
+	<script type="text/javascript">
+		writeContent(true);
+
+	</script>
+
+
+	<!-- #container -->
+	<div id="container">
+		<ul id="myRoundabout" class="roundabout-holder" style="padding: 0px; position: relative; z-index: 100;">
+			<li class="roundabout-moveable-item roundabout-in-focus" current-scale="1.0000" style="position: absolute; left: 122px; top: 87px; opacity: 1; z-index: 400; font-size: 16px;"><img src="./jscss/1.jpg" alt=""></li>
+			<li class="roundabout-moveable-item" current-scale="0.7927" style="position: absolute; left: -0.4px; top: 110px;  opacity: 1; z-index: 296; font-size: 12.68px;"><img src="./jscss/2.jpg"></li>
+			<li class="roundabout-moveable-item" current-scale="0.4573" style="position: absolute; left: 473.8px; top: 147.2px;  opacity: 1; z-index: 129; font-size: 7.32px;"><img src="./jscss/3.jpg"></li>
+			<li class="roundabout-moveable-item" current-scale="0.4573" style="position: absolute; left: -39.8px; top: 147.2px;  opacity: 1; z-index: 129; font-size: 7.32px;"><img src="./jscss/4.jpg"></li>
+			<li class="roundabout-moveable-item" current-scale="0.7927" style="position: absolute; left: 317px; top: 110px;  opacity: 1; z-index: 296; font-size: 12.68px;"><img src="./jscss/5.jpg"></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		setTimeout(move, 15000);
+		setTimeout(autoloop, 17000);
+		function autoloop() {
+			var el = document.getElementsByClassName("roundabout-in-focus");
+			el[0].onclick = function () {
+				window.location.href = "./xc/index.html"
+			}
+
+		}
+
+	</script>
+
+	<!-- #bg -->
+	<div id="bg">
+		<canvas id="garden" width="1583" height="709">
+			<c style="color: #FFF; text-shadow:2px 3px 3px #222; font-family:Microsoft YaHei; font-size:50px">你的浏览器过时了,试试火狐吧!</c>
+		</canvas>
+	</div>
+
+	<!-- #time -->
+	<div id="time">
+		<span id="show"></span>
+		<script type="text/javascript">
+			setTimeout("showTime()", 40000);
+		</script>
+	</div>
+
+	<audio src="./audio/wonderful.m4a" preload="preload" autoplay="autoplay" loop="loop" style="display: none">
+	</audio>
+</body>
+
+</html>
